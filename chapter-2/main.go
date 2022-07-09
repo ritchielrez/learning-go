@@ -24,6 +24,8 @@ func main() {
 	fmt.Println(person)
 	fmt.Println()
 
+	// Tnx to `range` keyword, we can easilly
+	// iterate over keys and values of a map
 	for key, value := range person {
 		if key == "bday" {
 			key = "birthday"
@@ -36,6 +38,8 @@ func main() {
 	fmt.Println(person)
 	fmt.Println()
 
+	// `delete` keyword allow for removal
+	// of key+value in a map
 	delete(person, "bday")
 
 	for key, value := range person {
