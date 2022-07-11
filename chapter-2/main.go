@@ -29,7 +29,7 @@ func main() {
 	for key, value := range person {
 		if key == "bday" {
 			key = "birthday"
-			value = "at" + value
+			value = "at " + value
 		}
 		fmt.Printf("Person's %v is %v\n", key, value)
 	}
