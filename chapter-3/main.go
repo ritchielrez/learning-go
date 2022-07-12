@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	cmd := exec.Command("go", "en")
+	cmd := exec.Command("go", "env")
 	// `cmd.Output()` functions returns the output with
 	// an error value
 	out, _ := cmd.Output()
@@ -15,7 +15,8 @@ func main() {
 	// strings library can be used for string conversion
 	// as the bytes array contains the ascii value of each
 	// characters
-	cmdOutput := strings.TrimSuffix(string(out), "\n")
+	// cmdOutput := strings.TrimSuffix(string(out), "\n")
+	cmdOutput := string(out)
 	fmt.Println(cmdOutput)
 
 	testStr := "Test String \n"
@@ -23,4 +24,5 @@ func main() {
 	// the 1st arg provided to the `strings.TrimSuffix()`
 	testStrTrim := strings.TrimSuffix(testStr, "\n")
 	fmt.Printf("\n%v", testStrTrim)
+	fmt.Println()
 }
