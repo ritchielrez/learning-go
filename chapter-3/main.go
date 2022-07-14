@@ -15,8 +15,8 @@ func main() {
 	// strings library can be used for string conversion
 	// as the bytes array contains the ascii value of each
 	// characters
-	// cmdOutput := strings.TrimSuffix(string(out), "\n")
-	cmdOutput := string(out)
+	cmdOutput := strings.TrimSuffix(string(out), "\n")
+	// cmdOutput := string(out)
 	fmt.Println([]byte(cmdOutput))
 
 	testStr := "Test String \n"
