@@ -17,7 +17,7 @@ func main() {
 	// characters
 	// cmdOutput := strings.TrimSuffix(string(out), "\n")
 	cmdOutput := string(out)
-	fmt.Println(cmdOutput)
+	fmt.Println([]byte(cmdOutput))
 
 	testStr := "Test String \n"
 	testBytes := []byte(testStr)
