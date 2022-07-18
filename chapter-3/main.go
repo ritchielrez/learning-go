@@ -22,6 +22,7 @@ func main() {
 	testStr := "Test String \n"
 	testBytes := []byte(testStr)
 	fmt.Printf("\n%v", testBytes)
+	
 	// The suffix(ending chars) would be removed from
 	// the 1st arg provided to the `strings.TrimSuffix()`
 	testStrTrim := strings.TrimSuffix(testStr, "\n")
