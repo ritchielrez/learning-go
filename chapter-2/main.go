@@ -14,7 +14,7 @@ func main() {
 	// person["age"] = "144"
 	// person["bday"] = "9/3/1878"
 
-	// `make` keyword initializes bothe
+	// `make` keyword initializes both
 	person := make(map[string]string)
 
 	person["name"] = "John"

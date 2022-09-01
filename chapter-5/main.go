@@ -9,8 +9,8 @@ func main() {
 	groceries = append(groceries, "Pineapple")
 	fmt.Println(groceries)
 
-	buylist := []string{"Chewing-gum", "Dark Fantasy"}
-	buylist = append(buylist, groceries...)
+	var buylist = make([]string, 2)
+	copy(buylist, groceries)
 
 	for _, buylistitem := range buylist {
 		fmt.Println(buylistitem)
