@@ -9,7 +9,9 @@ func main() {
 		fmt.Printf("Index: %v, Value: %v\n", index, value)
 	}
 
-	cashbacks := []int{1000, 2000, 3000, 4000}
+	// ... tells go that cashbacks is an array
+	// and find out the size of it by yourself XD
+	cashbacks := [...]int{1000, 2000, 3000, 4000}
 	biggest_cashback := cashbacks[0]
 
 	for _, cashback := range cashbacks {
