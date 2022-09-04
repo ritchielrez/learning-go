@@ -19,4 +19,16 @@ func main() {
 	fmt.Println(oddNumber())
 	fmt.Println(oddNumber())
 	fmt.Println(oddNumber())
+	fmt.Println()
+
+	// Asiging a function to a varaible
+	increment := func(num uint) uint {
+		num++
+		return num
+	}
+
+	fmt.Println(increment(oddNumber()))
+	fmt.Println(increment(oddNumber()))
+	fmt.Println(increment(oddNumber()))
+	fmt.Println(increment(oddNumber()))
 }
