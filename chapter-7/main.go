@@ -12,6 +12,13 @@ func makeOddNumber() func() uint {
 	}
 }
 
+func factorial(num int) int {
+	if num == 0 {
+		return 1
+	}
+	return num * factorial(num-1)
+}
+
 func main() {
 	oddNumber := makeOddNumber()
 
@@ -31,4 +38,10 @@ func main() {
 	fmt.Println(increment(oddNumber()))
 	fmt.Println(increment(oddNumber()))
 	fmt.Println(increment(oddNumber()))
+	fmt.Println()
+
+	fmt.Println(factorial(1))
+	fmt.Println(factorial(2))
+	fmt.Println(factorial(3))
+	fmt.Println(factorial(4))
 }
