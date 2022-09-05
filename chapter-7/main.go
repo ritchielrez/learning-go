@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// A function returning a function
 func makeOddNumber() func() uint {
 	number := uint(1)
 
@@ -22,26 +23,23 @@ func factorial(num int) int {
 func main() {
 	oddNumber := makeOddNumber()
 
-	fmt.Println(oddNumber())
-	fmt.Println(oddNumber())
-	fmt.Println(oddNumber())
-	fmt.Println(oddNumber())
+	for i := 1; i <= 4; i++ {
+		fmt.Println(oddNumber())
+	}
 	fmt.Println()
 
-	// Asiging a function to a varaible
+	// Asigning a function to a varaible
 	increment := func(num uint) uint {
 		num++
 		return num
 	}
 
-	fmt.Println(increment(oddNumber()))
-	fmt.Println(increment(oddNumber()))
-	fmt.Println(increment(oddNumber()))
-	fmt.Println(increment(oddNumber()))
+	for i := 1; i <= 4; i++ {
+		fmt.Println(increment(oddNumber()))
+	}
 	fmt.Println()
 
-	fmt.Println(factorial(1))
-	fmt.Println(factorial(2))
-	fmt.Println(factorial(3))
-	fmt.Println(factorial(4))
+	for i := 1; i <= 4; i++ {
+		fmt.Println(factorial(i))
+	}
 }
