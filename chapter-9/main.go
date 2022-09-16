@@ -9,6 +9,7 @@ func one(value *int) {
 func main() {
 	value := new(int)
 	fmt.Println(*value)
+
 	one(value)
 	fmt.Println(*value)
 }
