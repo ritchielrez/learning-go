@@ -20,6 +20,15 @@ func factorial(num int) int {
 	return num * factorial(num-1)
 }
 
+func fibonacci(num int) int {
+  if num == 0 {
+    return 0
+  } else if num == 1 {
+    return 1
+  }
+  return fibonacci(num - 1) + fibonacci(num - 2)
+}
+
 func main() {
 	oddNumber := makeOddNumber()
 
@@ -42,4 +51,9 @@ func main() {
 	for i := 1; i <= 4; i++ {
 		fmt.Println(factorial(i))
 	}
+  fmt.Println()
+
+  for i := 1; i <=4; i++ {
+    fmt.Println(fibonacci(i))
+  }
 }
