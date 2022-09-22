@@ -5,7 +5,7 @@ import "fmt"
 type Rectangle struct {
 	xCoordinate float64
 	yCoordinate float64
-  zCoordinate float64
+	zCoordinate float64
 }
 
 func RectangleArea(rectangle Rectangle) float64 {
@@ -13,7 +13,7 @@ func RectangleArea(rectangle Rectangle) float64 {
 }
 
 func RectangleVolume(rectangle Rectangle) float64 {
-  return rectangle.xCoordinate * rectangle.yCoordinate * rectangle.zCoordinate
+	return rectangle.xCoordinate * rectangle.yCoordinate * rectangle.zCoordinate
 }
 
 func main() {
