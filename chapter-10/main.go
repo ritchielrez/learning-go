@@ -6,12 +6,12 @@ type Square struct {
 	xCoordinate float64
 }
 
-func SquareArea(Square Square) float64 {
+func area(Square Square) float64 {
 	return Square.xCoordinate * Square.xCoordinate
 }
 
 // In-struct/in-object methods defined outside
-func (Square *Square) SquareVolume() float64 {
+func (Square *Square) volume() float64 {
 	return Square.xCoordinate * Square.xCoordinate * Square.xCoordinate
 }
 
@@ -23,19 +23,19 @@ type Rectangle struct {
 	zCoordinate float64
 }
 
-func (Rectangle *Rectangle) RectangleArea() float64 {
+func (Rectangle *Rectangle) area() float64 {
 	return Rectangle.xCoordinate * Rectangle.yCoordinate
 }
 
-func (Rectangle *Rectangle) RectangleVolume() float64 {
+func (Rectangle *Rectangle) volume() float64 {
 	return Rectangle.xCoordinate * Rectangle.yCoordinate * Rectangle.zCoordinate
 }
 
 func main() {
 	sqr := Square{10}
 
-	fmt.Printf("Area of the square: %v\n", SquareArea(sqr))
-	fmt.Printf("Volume of the square: %v\n", sqr.SquareVolume())
+	fmt.Printf("Area of the square: %v\n", area(sqr))
+	fmt.Printf("Volume of the square: %v\n", sqr.volume())
 	fmt.Println()
 
 	rect := Rectangle{}
@@ -43,7 +43,7 @@ func main() {
 	rect.yCoordinate = 20
 	rect.zCoordinate = 30
 
-	fmt.Printf("Area of the rectangle: %v\n", rect.RectangleArea())
-	fmt.Printf("Volume of the rectangle: %v\n", rect.RectangleVolume())
+	fmt.Printf("Area of the rectangle: %v\n", rect.area())
+	fmt.Printf("Volume of the rectangle: %v\n", rect.volume())
 
 }
