@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+type Shape interface {
+	volume() float64
+}
+
 type Square struct {
 	xCoordinate float64
 }
@@ -31,6 +35,15 @@ func (Rectangle *Rectangle) volume() float64 {
 	return Rectangle.xCoordinate * Rectangle.yCoordinate * Rectangle.zCoordinate
 }
 
+func totalVolume(shapes ...Shape) float64 {
+	var totalVol float64
+
+	for _, shape := range shapes {
+		totalVol += shape.volume()
+	}
+	return totalVol
+}
+
 func main() {
 	sqr := Square{10}
 
@@ -45,5 +58,7 @@ func main() {
 
 	fmt.Printf("Area of the rectangle: %v\n", rect.area())
 	fmt.Printf("Volume of the rectangle: %v\n", rect.volume())
+	fmt.Println()
 
+	fmt.Printf("Total volume of both shapes is: %v\n", totalVolume(&sqr, &rect))
 }
